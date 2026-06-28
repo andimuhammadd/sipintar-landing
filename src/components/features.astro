@@ -4,66 +4,81 @@ import { Icon } from "astro-icon/components";
 
 const features = [
   {
-    title: "Bring Your Own Framework",
+    title: "Jasa Ketik Cepat & Rapi",
     description:
-      "Build your site using React, Svelte, Vue, Preact, web components, or just plain ol' HTML + JavaScript.",
-    icon: "bx:bxs-briefcase",
+      "Layanan pengetikan dokumen, laporan, atau modul kuliah ke format Word, Excel, maupun PDF dengan format yang rapi dan minim typo.",
+    icon: "bx:bx-laptop",
   },
   {
-    title: "100% Static HTML, No JS",
+    title: "Jasa Tulis Tangan",
     description:
-      "Astro renders your entire page to static HTML, removing all JavaScript from your final build by default.",
-    icon: "bx:bxs-window-alt",
+      "Solusi untuk tugas resume atau catatan di kertas folio/buku. Dikerjakan dengan tulisan yang bersih, rapi, dan mudah dibaca.",
+    icon: "bx:bx-edit",
   },
   {
-    title: "On-Demand Components",
+    title: "Jasa Makalah & Paper",
     description:
-      "Need some JS? Astro can automatically hydrate interactive components when they become visible on the page.  ",
-    icon: "bx:bxs-data",
+      "Penyusunan makalah kelompok atau individu dari nol. Dilengkapi dengan struktur akademik yang benar dan referensi valid.",
+    icon: "bx:bx-copy-alt",
   },
   {
-    title: "Broad Integration",
+    title: "Jasa Presentasi (PPT)",
     description:
-      "Astro supports TypeScript, Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any other npm packages.",
-    icon: "bx:bxs-bot",
+      "Pembuatan slide PowerPoint (PPT) yang menarik, modern, dan interaktif untuk kebutuhan presentasi harian maupun materi sidang.",
+    icon: "bx:bx-slideshow",
   },
   {
-    title: "SEO Enabled",
+    title: "Bantuan Tugas Harian",
     description:
-      "Automatic sitemaps, RSS feeds, pagination and collections take the pain out of SEO and syndication. It just works!",
-    icon: "bx:bxs-file-find",
+      "Membantu menyelesaikan berbagai tugas harian kuliah atau sekolah, mulai dari hitungan, rangkuman materi, hingga soal latihan.",
+    icon: "bx:bx-task",
   },
   {
-    title: "Community",
+    title: "Proposal & Skripsi",
     description:
-      "Astro is an open source project powered by hundreds of contributors making thousands of individual contributions.",
-    icon: "bx:bxs-user",
+      "Pendampingan pengerjaan Tugas Akhir atau Skripsi, baik secara parsial (per Bab) maupun full dari awal hingga bab kesimpulan.",
+    icon: "bx:bx-book-bookmark",
+  },
+  {
+    title: "Jasa Translate Terpercaya",
+    description:
+      "Penerjemahan dokumen akademik, abstrak skripsi, atau jurnal ilmiah dari bahasa Inggris ke Indonesia (dan sebaliknya) secara natural.",
+    icon: "bx:bx-globe",
+  },
+  {
+    title: "Jasa Buat Jurnal Ilmiah",
+    description:
+      "Bantu konversi laporan penelitian atau skripsimu menjadi artikel jurnal ilmiah yang siap submit ke jurnal nasional maupun internasional.",
+    icon: "bx:bx-file",
   },
 ];
 ---
 
-<div class="mt-16 md:mt-0">
+<div class="mt-16 md:mt-24 text-center">
   <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-    Everything you need to start a website
+    Layanan Terbaik untuk Tugas Kuliah & Sekolahmu
   </h2>
-  <p class="text-lg mt-4 text-slate-600">
-    Astro comes batteries included. It takes the best parts of state-of-the-art
-    tools and adds its own innovations.
+  <p class="text-lg mt-4 text-slate-600 max-w-xl mx-auto">
+    Kami menyediakan berbagai layanan pengerjaan tugas akademik yang dikerjakan oleh tim ahli secara cepat, rapi, dan rahasia terjamin. Pilih layanan yang kamu butuhkan sekarang!
   </p>
 </div>
 
-<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+<div class="grid sm:grid-cols-2 md:grid-cols-4 mt-16 gap-x-8 gap-y-12">
   {
     features.map((item) => (
-      <div class="flex gap-4 items-start">
-        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
-          <Icon class="text-white" name={item.icon} />
+      <div class="flex flex-col items-center text-center p-6 bg-white rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition">
+        <div class="mb-4 bg-blue-600 rounded-full p-3 w-12 h-12 flex items-center justify-center shrink-0 shadow-sm shadow-blue-200">
+          <Icon class="text-white text-xl" name={item.icon} />
         </div>
         <div>
-          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
-          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+          <h3 class="font-semibold text-lg text-slate-800">{item.title}</h3>{" "}
+          <p class="text-slate-500 mt-2 text-sm leading-relaxed">{item.description}</p>
         </div>
       </div>
     ))
   }
+</div>
+
+<div class="mt-12 bg-blue-600 text-white rounded-xl p-4 text-center font-bold text-lg md:text-xl tracking-wide uppercase shadow-md shadow-blue-200">
+  🔥 Menerima Semua Jenis Mata Pelajaran / Kuliah! 🔥
 </div>

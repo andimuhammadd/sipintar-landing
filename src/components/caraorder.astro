@@ -1,0 +1,86 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon/components";
+
+const steps = [
+  {
+    no: "1",
+    title: "Chat SiPintar",
+    desc: "Hubungi CS kami melalui WhatsApp untuk berkonsultasi mengenai tugasmu.",
+    icon: "simple-icons:whatsapp",
+    iconColor: "text-green-500",
+  },
+  {
+    no: "2",
+    title: "Kirim Detail Tugas",
+    desc: "Kirim detail tugas Anda untuk direview terlebih dahulu dan penetapan estimasi waktu.",
+    icon: "lucide:file-text",
+    iconColor: "text-blue-500",
+  },
+  {
+    no: "3",
+    title: "Pembayaran Awal",
+    desc: "Lakukan pembayaran minimal DP 50% sebelum tugas atau project dikerjakan oleh tim kami.",
+    icon: "lucide:wallet",
+    iconColor: "text-amber-500",
+  },
+  {
+    no: "4",
+    title: "Komunikasi",
+    desc: "Kami selalu update progress tugas dan diskusi mengenai tugas atau project secara transparan.",
+    icon: "lucide:messages-square",
+    iconColor: "text-indigo-500",
+  },
+  {
+    no: "5",
+    title: "Fix Project",
+    desc: "Tugas atau project sudah selesai dikerjakan, dicek bersama, dan melakukan pelunasan.",
+    icon: "lucide:badge-check",
+    iconColor: "text-emerald-500",
+  },
+  {
+    no: "6",
+    title: "Penyerahan",
+    desc: "Penyerahan hasil akhir tugas atau project sepenuhnya kepada klien dengan aman.",
+    icon: "lucide:file-check-2",
+    iconColor: "text-sky-500",
+  },
+];
+---
+
+<div class="mt-24">
+  <div class="text-center max-w-2xl mx-auto mb-12">
+    <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-slate-800">
+      Tahapan Order Tugas di SiPintar
+    </h2>
+    <p class="text-slate-500 mt-3 text-base md:text-lg">
+      Prosedur pemesanan yang mudah, transparan, dan terstruktur demi kenyamanan kuliahmu.
+    </p>
+  </div>
+
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+    {
+      steps.map((item) => (
+        <div class="bg-gradient-to-br from-blue-50/50 to-slate-50 border border-slate-100/80 p-8 rounded-2xl relative flex flex-col items-center text-center shadow-sm hover:shadow-md hover:border-blue-100 transition duration-300">
+          <!-- Nomor Urut di Pojok Kiri Atas -->
+          <span class="absolute top-4 left-6 text-2xl font-bold text-blue-600/20">
+            {item.no}
+          </span>
+          
+          <!-- Ikon Representatif -->
+          <div class="bg-white p-4 rounded-xl shadow-xs border border-slate-100 mb-5 mt-2">
+            <Icon class={`size-8 md:size-9 ${item.iconColor}`} name={item.icon} />
+          </div>
+
+          <!-- Konten Teks -->
+          <h3 class="text-xl font-bold text-slate-800 tracking-tight">
+            {item.title}
+          </h3>
+          <p class="text-slate-600 mt-3 text-sm md:text-base leading-relaxed">
+            {item.desc}
+          </p>
+        </div>
+      ))
+    }
+  </div>
+</div>

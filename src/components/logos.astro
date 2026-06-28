@@ -3,16 +3,45 @@
 import { Icon } from "astro-icon/components";
 ---
 
-<div class="mt-24">
-  <h2 class="text-center text-slate-500">Works with your technologies</h2>
-  <div class="flex gap-8 md:gap-20 items-center justify-center mt-10 flex-wrap">
+<div class="mt-24 text-center">
+  <h2 class="text-slate-600 font-medium text-lg">Menggunakan Referensi & Software Standar Akademik</h2>
+  <div class="flex gap-8 md:gap-16 items-center justify-center mt-8 flex-wrap grayscale opacity-75 hover:grayscale-0 transition duration-300">
 
-    <Icon class="size-8 md:size-12" name="simple-icons:react" />
-    <Icon class="size-8 md:size-12" name="simple-icons:svelte" />
-    <Icon class="size-8 md:size-12" name="simple-icons:astro" />
-    <Icon class="size-8 md:size-16" name="simple-icons:tailwindcss" />
-    <Icon class="size-8 md:size-16" name="simple-icons:alpinedotjs" />
-    <Icon class="size-8 md:size-12" name="simple-icons:vercel" />
+    <!-- Microsoft Word -->
+    <div class="flex flex-col items-center gap-2">
+      <Icon class="size-8 md:size-12 text-[#185abd]" name="simple-icons:microsoftword" />
+      <span class="text-xs font-medium text-slate-500">MS Word</span>
+    </div>
+
+    <!-- Microsoft PowerPoint -->
+    <div class="flex flex-col items-center gap-2">
+      <Icon class="size-8 md:size-12 text-[#b7472a]" name="simple-icons:microsoftpowerpoint" />
+      <span class="text-xs font-medium text-slate-500">MS PPT</span>
+    </div>
+
+    <!-- Google Scholar -->
+    <div class="flex flex-col items-center gap-2">
+      <Icon class="size-8 md:size-12 text-[#4285f4]" name="simple-icons:googlescholar" />
+      <span class="text-xs font-medium text-slate-500">Scholar</span>
+    </div>
+
+    <!-- Mendeley -->
+    <div class="flex flex-col items-center gap-2">
+      <Icon class="size-8 md:size-12 text-[#9e1c1c]" name="simple-icons:mendeley" />
+      <span class="text-xs font-medium text-slate-500">Mendeley</span>
+    </div>
+
+    <!-- Turnitin (Diwakili ikon tameng/keamanan umum karena tidak ada official brand icon) -->
+    <div class="flex flex-col items-center gap-2">
+      <Icon class="size-8 md:size-12 text-[#e02424]" name="simple-icons:gitbook" />
+      <span class="text-xs font-medium text-slate-500">Turnitin Check</span>
+    </div>
+
+    <!-- IBM SPSS / Statistik (Diwakili ikon diagram batang/analisis data) -->
+    <div class="flex flex-col items-center gap-2">
+      <Icon class="size-8 md:size-12 text-[#0f172a]" name="simple-icons:googleanalytics" />
+      <span class="text-xs font-medium text-slate-500">Olah Data</span>
+    </div>
 
   </div>
 </div>

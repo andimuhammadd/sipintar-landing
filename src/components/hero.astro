@@ -6,8 +6,10 @@ import { Icon } from "astro-icon/components";
 ---
 
 <main
-  class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
-  <div class="py-6 md:order-1 hidden md:block">
+  class="grid lg:grid-cols-2 place-items-center pt-8 pb-8 md:pt-12 md:pb-24 px-5 max-w-7xl mx-auto gap-8">
+  
+  <!-- Gambar sekarang muncul di HP (di atas teks) dan di desktop (di kanan) -->
+  <div class="py-4 lg:order-1 w-full max-w-sm lg:max-w-none flex justify-center">
     <Picture
       src={heroImage}
       alt="Astronaut in the air"
@@ -15,39 +17,50 @@ import { Icon } from "astro-icon/components";
       sizes="(max-width: 800px) 100vw, 620px"
       loading="eager"
       format="avif"
+      class="w-4/5 h-auto md:w-full max-h-[300px] md:max-h-none object-contain animate-pulse-slow"
     />
   </div>
-  <div>
-    <h1
-      class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
-      Marketing website done with Astro
-    </h1>
-    <p class="text-lg mt-4 text-slate-600 max-w-xl">
-      Astroship is a starter template for startups, marketing websites & landing
-      pages.<wbr /> Built with Astro.build and TailwindCSS. You can quickly create
-      any website with this starter.
-    </p>
-    <div class="mt-6 flex flex-col sm:flex-row gap-3">
-      <Link
-        href="#"
-        href="https://web3templates.com/templates/astroship-starter-website-template-for-astro"
-        target="_blank"
-        class="flex gap-1 items-center justify-center"
-        rel="noopener">
-        <Icon class="text-white w-5 h-5" name="bx:bxs-cloud-download" />
 
-        Download for Free
+  <div class="text-center lg:text-left flex flex-col items-center lg:items-start">
+    <!-- Menambahkan gradasi warna biru pada kata kunci penting -->
+    <h1
+      class="text-3xl sm:text-4xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter text-slate-900 leading-tight">
+      Tugas Banyak? Santai Saja, Serahin ke <span class="bg-gradient-to-r from-blue-600 to-sky-500 bg-clip-text text-transparent">SiPintar Joki Tugas!</span>
+    </h1>
+    
+    <p class="text-base sm:text-lg mt-4 text-slate-600 max-w-xl leading-relaxed">
+      Lagi pusing sama tugas akhir semester? Jangan biarkan stres mengganggu kuliahmu. Tim SiPintar siap bantu ngerjain tugas apa pun, dari yang simpel kayak jasa ketik sampai yang kompleks seperti skripsi dan jurnal. Hubungi kami untuk harga yang ramah di kantong dan proses yang gampang. Dijamin tugas kamu selesai tepat waktu!
+    </p>
+    
+    <!-- Tombol responsif: menumpuk di HP, berjejer di desktop -->
+    <div class="mt-6 flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
+      <Link
+        href="https://wa.me/6283153512049?text=Halo%20Admin%20SiPintar,%20saya%20mau%20konsultasi%20tugas..."
+        target="_blank"
+        class="flex gap-2 items-center justify-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium shadow-md shadow-blue-100 transition w-full sm:w-auto"
+        rel="noopener">
+        <Icon class="text-white w-5 h-5" name="bx:bxl-whatsapp" />
+        Konsultasi via WA
       </Link>
       <Link
         size="lg"
         style="outline"
         rel="noopener"
-        href="https://github.com/surjithctly/astroship"
-        class="flex gap-1 items-center justify-center"
-        target="_blank">
-        <Icon class="text-black w-4 h-4" name="bx:bxl-github" />
-        GitHub Repo
+        href="#layanan"
+        class="flex gap-2 items-center justify-center border border-slate-300 hover:border-slate-400 text-slate-700 px-6 py-3 rounded-lg font-medium transition w-full sm:w-auto">
+        Lihat Layanan
       </Link>
     </div>
   </div>
 </main>
+
+<style>
+  /* Animasi melayang halus untuk gambar astronot */
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  .animate-pulse-slow {
+    animation: float 4s ease-in-out infinite;
+  }
+</style>
